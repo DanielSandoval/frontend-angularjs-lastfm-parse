@@ -1,0 +1,318 @@
+/*Login Style*/
+
+html, body{
+	margin: 0px;
+	width: 100%;
+}
+
+/*Part Up*/
+/*Slide Zone*/
+
+.partUp {
+	width: 80%;
+	height: 337px;
+	padding-left: 10%;
+	padding-right: 10%;
+	position: relative;
+	background-color: black;
+}
+
+.slide-zone {
+	width: 100%;
+	height: 100%;
+}
+
+.slide {
+	width: 80%;
+	height: 337px;
+	position: absolute;
+	display: none;
+}
+
+.image {
+	width: 100%;
+	height: 100%;
+}
+
+.active-slide {
+	display: block;
+}
+
+/*Dot Zone*/
+
+.dots-zone {
+	position: absolute;
+	width: 80%;
+	bottom: 0%;
+	margin: 0 auto;
+	padding: 0%;
+	text-align: center;
+}
+
+.slider-dots {
+	list-style: none;
+	height: 100%;
+	margin: 0%;
+	padding: 0%;
+	background-size: cover;
+}
+
+.slider-dots li {
+	color: #363636;
+	font-size: 30px;
+}
+
+.slider-dots .active-dot {
+	color: white;
+}
+
+.dot {
+	display: inline;
+}
+
+/*Part Down*/
+
+.partDown {
+	background-color: red;
+	padding-left: 25%;
+	padding-right: 25%;
+	overflow: auto;
+	color: white;
+}
+
+input {
+	width: 96%;
+	clear: right;
+	color: black;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.forget-pass {
+	margin-top: 36px;
+}
+
+button {
+	border: 1px solid black;
+	background-color: black;
+	color: white;
+
+}
+
+.first-button {
+	margin-top: 25px;
+	margin-bottom: 15px;
+}
+
+.second-button {
+	margin-top: 20px;
+	margin-bottom: 15px;
+}
+
+.first-form {
+	float: left;
+	width: 40%;
+}
+
+.line {
+	float: left;
+	width: 20%;
+	height: 100%;
+}
+
+hr {
+	width: 1px;
+	height: 320px;
+	color: white;
+}
+
+.second-form {
+	float: left;
+	width: 40%;
+}
+
+.to-center {
+	text-align: center;
+}
+
+@media (max-width: 1210px) {
+	.partDown {
+		padding-left: 20%;
+		padding-right: 20%;
+	}
+}
+
+@media (max-width: 1020px) {
+	.partUp {
+		width: 85%;
+		padding-left: 7.5%;
+		padding-right: 7.5%;
+	}
+	.slide {
+		width: 85%;
+	}
+	.dots-zone {
+		width: 85%;
+	}
+	.partDown {
+		padding-left: 15%;
+		padding-right: 15%;
+	}
+}
+
+@media (max-width: 875px) {
+	.partUp {
+		width: 90%;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+	.slide {
+		width: 90%;
+	}
+	.dots-zone {
+		width: 90%;
+	}
+	.line {
+		width: 10%;
+	}
+	.first-form {
+		float: left;
+		width: 45%;
+	}
+	.second-form {
+		float: left;
+		width: 45%;
+	}
+}
+
+@media (max-width: 850px) {
+	.partUp {
+		width: 95%;
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+	}
+	.slide {
+		width: 95%;
+	}
+	.dots-zone {
+		width: 95%;
+	}
+	.partDown {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+}
+
+@media (max-width: 615px) {
+	.partUp {
+		width: 100%;
+		padding-left: 0%;
+		padding-right: 0%;
+	}
+	.slide {
+		width: 100%;
+	}
+	.dots-zone {
+		width: 100%;
+	}
+	.partDown {
+		padding-left: 0%;
+		padding-right: 0%;
+	}
+	.line {
+		width: 5%;
+	}
+	.first-form {
+		float: left;
+		width: 47.5%;
+	}
+	.second-form {
+		float: left;
+		width: 47.5%;
+	}
+}
+
+@media (max-width: 530px) {
+	.partUp {
+		height: 250px;
+	}
+	.slide {
+		height: 250px;
+	}
+	input {
+		width: 97%;
+	}
+	.line {
+		display: none;
+	}
+	.first-form {
+		float: left;
+		width: 100%;
+	}
+	.second-form {
+		float: left;
+		width: 100%;
+	}
+	.forget-pass {
+		margin-top: 10px;
+	}
+	.first-button {
+		margin-top: 0px;
+		margin-bottom: 10px;
+	}
+	.second-button {
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+}
+
+@media (max-width: 400px) {
+	body {
+		font-size: 15.5px;
+	}
+	.partUp {
+		height: 190px;
+	}
+	.slide {
+		height: 190px;
+	}
+	.to-center {
+		font-size: 18px;
+	}
+}
+
+/*Chart Style*/
+/*Top Chart Area*/
+
+.chart-area {
+	background-color: white;
+}
+
+.order-position {
+	text-align: center;
+	cursor: pointer;
+	font-weight: bold;
+	background-color: #2D8097;
+	color: black;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+.table-chart {
+	width: 100%;
+}
+
+th {
+	background-color: #2D8097;
+}
+
+td {
+	background-color: #D4712B;
+}
+
+.change-cursor {
+	cursor: pointer;
+}
