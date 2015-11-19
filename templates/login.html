@@ -32,14 +32,14 @@
 		<form action="/" id="myLogin">
 			<h2 class="to-center">Ingresar</h2>
 			<p>Correro electrónico</p>
-			<input type="email" id="my-email" ng-model="myemail">
+			<input type="text" id="login-email" ng-model="myemail" placeholder="Email">
 			<p>Contraseña</p>
-			<input type="password" id="password" ng-model="password">
+			<input type="password" id="login-password" ng-model="password" placeholder="Password">
 			<a><p class="forget-pass">¿Olvidaste tu contraseña?</p></a>
 			<center>
-				<a href="#/list-songs">
-					<button type="button" class="first-button" ng-click="submit()">Ingresar</button>
-				</a>
+				<!--<a href="#/list-songs">-->
+				<button type="button" class="first-button" ng-click="login()">Ingresar</button>
+				<!--</a>-->
 			</center>
 		</form>
 	</div>
@@ -49,16 +49,17 @@
 	</div>
 
 	<div class="second-form">
-  		<form>
+  		<form id="signup">
 			<h2 class="to-center">Crea tu perfil</h2>
 			<p>Nombre</p>
-			<input type="text">
+			<input type="text" id="signup-user" placeholder="Nombre" readonly="readonly">
 			<p>Correo electrónico</p>
-			<input type="text">
+			<input type="email" id="signup-email" placeholder="Email">
 			<p>Contraseña</p>
-			<input type="text">
+			<input type="password" id="signup-password" placeholder="Password">
 			<center>
-				<button type="button" class="second-button">Continuar</button>
+				<button type="button" class="second-button" ng-click="signUp()">Continuar</button>
+				<!--<input type="submit" id="signup-submit">-->
 			</center>
   		</form>
 	</div>

@@ -1,4 +1,6 @@
 // Javascript Code.
+Parse.initialize("o738tDIjX7Oq1jSB1PtSG6LfVeZqOgpaKH0pK3dt", "p7JfKdqPlYwWoenFcH1pnxR73YDzNaHAjz6iAwhq");
+
 var myApp = angular.module('app', ['ngRoute']);
 
 myApp.controller('PasswordController', function PasswordController($scope) {
@@ -19,7 +21,9 @@ myApp.controller('PasswordController', function PasswordController($scope) {
 myApp.config(function($routeProvider) {
   $routeProvider
     .when('/', {
-      templateUrl:'templates/login.html'
+      templateUrl:'templates/login.html',
+      controller: 'MainController',
+      controllerAs: 'LoginCtrl'
     })
     .when('/list-songs', {
       templateUrl:'templates/list-songs.html',
@@ -28,27 +32,56 @@ myApp.config(function($routeProvider) {
     });
 });
 
-/*myApp.controller('MainController', function() {
-  var user = new Parse.User();
-  user.set("username", "danielsandoval");
-  user.set("password","123");
-  user.set("email", "danielsandoval@gmail.com");
+myApp.controller('MainController', function($scope, $window) {
 
-  user.signUp(null, {
-    success: function(user) {
-      alert("hola mundo");
-    },
-    error: function(user, error) {
-      alert("Ha habido un error en el Sign Up");
-    }
-  });
-});*/
+  $scope.signUp = function() {
+
+    var username_sign = $("#signup-user").val();
+    var password_sign = $("#signup-password").val();
+    var email_sign = $("#signup-email").val();
+
+    var user = new Parse.User();
+    user.set("username", username_sign);
+    user.set("password",password_sign);
+    user.set("email", email_sign);
+
+    user.signUp(null, {
+      success: function(user) {
+        $window.location.href = '#/list-songs';
+      },
+      error: function(user, error) {
+        alert("Error: " + error.message);
+        //console.log("Error: " + error.message);
+      }
+    });
+  };
+
+  $scope.login = function() {
+
+    var username_login = $("#login-email").val();
+    var password_login = $("#login-password").val();
+
+    Parse.User.logIn(username_login, password_login, {
+      success: function(user) {
+        //alert("Log in success!");
+        $window.location.href = '#/list-songs';
+      }, error: function(user, error) {
+        alert("Error: " + error.message);
+        //console.log("Error: " + error.message);
+      }
+    });
+  };
+
+  $scope.logout = function() {
+    Parse.User.logOut();
+  };
+
+});
 
 myApp.controller('ChartController', function($scope, $http) {
   $http.get('http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=85b8c37b1a6be5182a5ed0549c4a7400&format=json')
     .success(function(data){
       $scope.listTracksInfo = data['tracks']['track'];
-      //$scope.imageUrl = data['tracks']['track'][0]['image'][0]['#text'];
     })
     .error(function(err) {
       return err;
@@ -78,4 +111,9 @@ $(document).ready(function() {
     presentDot.removeClass("active-dot");
     nextDot.addClass("active-dot");
   }, 2500);
+
+  $("#signup-email").keyup(function() {
+    var email = $(this).val();
+    $("#signup-user").val(email);
+  });
 });
