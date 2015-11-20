@@ -1,6 +1,9 @@
 <!--This is the top part-->
 <div class="partUp">
 	<div class="slide-zone">
+		<!--This is the logo-->
+		<img src="sketch/last_fm_logo.png" class="logo-login">
+
 		<!--This is the first slide-->
   		<div class="slide active-slide">
   			<img src="sketch/hardwell-01.png" class="image">
@@ -37,9 +40,7 @@
 			<input type="password" id="login-password" ng-model="password" placeholder="Password">
 			<a><p class="forget-pass">¿Olvidaste tu contraseña?</p></a>
 			<center>
-				<!--<a href="#/list-songs">-->
-				<button type="button" class="first-button" ng-click="login()">Ingresar</button>
-				<!--</a>-->
+				<button type="button" class="login-button" ng-click="login()">Ingresar</button>
 			</center>
 		</form>
 	</div>
@@ -52,13 +53,13 @@
   		<form id="signup">
 			<h2 class="to-center">Crea tu perfil</h2>
 			<p>Nombre</p>
-			<input type="text" id="signup-user" placeholder="Nombre" readonly="readonly">
+			<input type="text" id="signup-user" placeholder="Nombre (Se genera automaticamente)" readonly="readonly">
 			<p>Correo electrónico</p>
 			<input type="email" id="signup-email" placeholder="Email">
 			<p>Contraseña</p>
 			<input type="password" id="signup-password" placeholder="Password">
 			<center>
-				<button type="button" class="second-button" ng-click="signUp()">Continuar</button>
+				<button type="button" class="signup-button" ng-click="signUp()">Continuar</button>
 				<!--<input type="submit" id="signup-submit">-->
 			</center>
   		</form>

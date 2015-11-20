@@ -51,7 +51,6 @@ myApp.controller('MainController', function($scope, $window) {
       },
       error: function(user, error) {
         alert("Error: " + error.message);
-        //console.log("Error: " + error.message);
       }
     });
   };
@@ -63,22 +62,16 @@ myApp.controller('MainController', function($scope, $window) {
 
     Parse.User.logIn(username_login, password_login, {
       success: function(user) {
-        //alert("Log in success!");
         $window.location.href = '#/list-songs';
       }, error: function(user, error) {
         alert("Error: " + error.message);
-        //console.log("Error: " + error.message);
       }
     });
   };
 
-  $scope.logout = function() {
-    Parse.User.logOut();
-  };
-
 });
 
-myApp.controller('ChartController', function($scope, $http) {
+myApp.controller('ChartController', function($scope, $http, $location) {
   $http.get('http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=85b8c37b1a6be5182a5ed0549c4a7400&format=json')
     .success(function(data){
       $scope.listTracksInfo = data['tracks']['track'];
@@ -89,6 +82,12 @@ myApp.controller('ChartController', function($scope, $http) {
   $scope.selectOrder = function(orderBy) {
     $scope.typeOrder = orderBy;
   };
+
+  $scope.logout = function() {
+    Parse.User.logOut();
+    $location.path('/');
+  };
+
 });
 
 $(document).ready(function() {

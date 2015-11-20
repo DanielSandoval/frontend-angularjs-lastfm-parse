@@ -1,7 +1,16 @@
 <div class="chart-area">
-	<center>
-		<button class="order-position" ng-click="selectOrder('none')">Order by position</button>
-	</center>
+	<div class="top-area">
+		<img src="sketch/last_fm_logo.png" class="logo-chart">
+		<input type="text" placeholder="Busca artistas, canciones o álbums..." class="search-area">
+	</div>
+
+	<div class="zone-buttons">
+		<center>
+			<button class="order-position" ng-click="selectOrder('none')">Order by position</button>
+			<button class="logout-button" ng-click="logout()">Log Out</button>
+		</center>
+	</div>
+
 	<table class="table-chart">
 		<tr>
 			<th ng-click="selectOrder('name')" class="change-cursor">Song</th>

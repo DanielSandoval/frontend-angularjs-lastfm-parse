@@ -9,10 +9,10 @@ html, body{
 /*Slide Zone*/
 
 .partUp {
-	width: 80%;
+	width: 82%;
 	height: 337px;
-	padding-left: 10%;
-	padding-right: 10%;
+	padding-left: 9%;
+	padding-right: 9%;
 	position: relative;
 	background-color: black;
 }
@@ -23,7 +23,7 @@ html, body{
 }
 
 .slide {
-	width: 80%;
+	width: 82%;
 	height: 337px;
 	position: absolute;
 	display: none;
@@ -32,17 +32,25 @@ html, body{
 .image {
 	width: 100%;
 	height: 100%;
+	z-index: 1;
 }
 
 .active-slide {
 	display: block;
 }
 
+.logo-login {
+	position: absolute;
+	z-index: 2;
+	height: 50px;
+	margin-left: 3%;
+}
+
 /*Dot Zone*/
 
 .dots-zone {
 	position: absolute;
-	width: 80%;
+	width: 82%;
 	bottom: 0%;
 	margin: 0 auto;
 	padding: 0%;
@@ -95,7 +103,7 @@ a {
 	margin-top: 36px;
 }
 
-button {
+.login-button, .signup-button {
 	border: 1px solid black;
 	background-color: black;
 	color: white;
@@ -285,11 +293,31 @@ hr {
 }
 
 /*Chart Style*/
-/*Top Chart Area*/
 
-.chart-area {
-	background-color: white;
+/*Top Area*/
+
+.top-area {
+	background-color: red;
+	position: relative;
+	width: 76%;
+	height: 50px;
+	padding-left: 12%;
+	padding-right: 12%;
 }
+
+.logo-chart {
+	height: 100%;
+}
+
+.search-area {
+	/*float: right;*/
+	right: 12%;
+	position: absolute;
+	top: 30%;
+	width: 270px;
+}
+
+/*Table Chart Area*/
 
 .order-position {
 	text-align: center;
@@ -299,6 +327,17 @@ hr {
 	color: black;
 	margin-top: 1%;
 	margin-bottom: 1%;
+}
+
+.zone-buttons {
+	width: 100%;
+	position: relative;
+}
+
+.logout-button {
+	position: absolute;
+	right: 4%;
+	top: 27%;
 }
 
 .table-chart {
