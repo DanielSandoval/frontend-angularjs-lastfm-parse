@@ -340,6 +340,10 @@ hr {
 	top: 27%;
 }
 
+#table-area {
+	width: 100%;
+}
+
 .table-chart {
 	width: 100%;
 }
@@ -354,4 +358,47 @@ td {
 
 .change-cursor {
 	cursor: pointer;
+}
+
+@media (max-width: 643px) {
+	.top-area {
+		width: 90%;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+	.search-area {right: 5%}
+}
+
+@media (max-width: 550px) {
+	#table-area {
+		overflow: auto;
+	}
+	.table-chart {
+		width: 550px;
+	}
+}
+
+@media (max-width: 490px) {
+	.top-area {height: 100px;}
+	.logo-chart {height: 50%;}
+	.search-area {
+		width: 90%;
+		top: 60%;
+	}
+	.logout-button {
+		top: -250%;
+		right: 5%;
+	}
+}
+
+@media (max-width: 450px) {
+	.logout-button {
+		top: -260%;
+	}
+}
+
+@media (max-width: 410px) {
+	.logout-button {
+		top: -270%;
+	}
 }

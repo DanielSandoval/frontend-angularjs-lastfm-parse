@@ -1,7 +1,7 @@
 <div class="chart-area">
 	<div class="top-area">
 		<img src="sketch/last_fm_logo.png" class="logo-chart">
-		<input type="text" placeholder="Busca artistas, canciones o álbums..." class="search-area">
+		<input type="text" placeholder="Busca artistas, canciones o álbums..." class="search-area" ng-model="search">
 	</div>
 
 	<div class="zone-buttons">
@@ -11,30 +11,33 @@
 		</center>
 	</div>
 
-	<table class="table-chart">
-		<tr>
-			<th ng-click="selectOrder('name')" class="change-cursor">Song</th>
-			<th ng-click="selectOrder('artist.name')" class="change-cursor">Artist</th>
-			<th>Duration</th>
-			<th ng-click="selectOrder('playcount')" class="change-cursor">Playcount</th>
-			<th>Image</th>
-		</tr>
-		<tr ng-repeat="trackInfo in listTracksInfo | orderBy: typeOrder">
-			<td>
-				{{trackInfo.name}}
-			</td>
-			<td>
-				{{trackInfo.artist.name}}
-			</td>
-			<td>
-				{{trackInfo.duration}}
-			</td>
-			<td>
-				{{trackInfo.playcount}}
-			</td>
-			<td>
-				<img ng-src="{{trackInfo['image'][0]['#text']}}">
-			</td>
-		</tr>
-	</table>
+	<div id="table-area">
+
+		<table class="table-chart">
+			<tr>
+				<th ng-click="selectOrder('name')" class="change-cursor">Song</th>
+				<th ng-click="selectOrder('artist.name')" class="change-cursor">Artist</th>
+				<th>Duration</th>
+				<th ng-click="selectOrder('playcount')" class="change-cursor">Playcount</th>
+				<th>Image</th>
+			</tr>
+			<tr ng-repeat="trackInfo in listTracksInfo | filter: search | orderBy: typeOrder">
+				<td>
+					{{trackInfo.name}}
+				</td>
+				<td>
+					{{trackInfo.artist.name}}
+				</td>
+				<td>
+					{{trackInfo.duration}}
+				</td>
+				<td>
+					{{trackInfo.playcount}}
+				</td>
+				<td>
+					<img ng-src="{{trackInfo['image'][0]['#text']}}">
+				</td>
+			</tr>
+		</table>
+	</div>
 </div>
