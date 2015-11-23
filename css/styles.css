@@ -3,6 +3,7 @@
 html, body{
 	margin: 0px;
 	width: 100%;
+	height: 100%;
 }
 
 /*Part Up*/
@@ -10,7 +11,8 @@ html, body{
 
 .partUp {
 	width: 82%;
-	height: 337px;
+	/*height: 337px;*/
+	height: 50%;
 	padding-left: 9%;
 	padding-right: 9%;
 	position: relative;
@@ -24,7 +26,8 @@ html, body{
 
 .slide {
 	width: 82%;
-	height: 337px;
+	/*height: 337px;*/
+	height: 100%;
 	position: absolute;
 	display: none;
 }
@@ -82,6 +85,7 @@ html, body{
 
 .partDown {
 	background-color: red;
+	height: 50%;
 	padding-left: 25%;
 	padding-right: 25%;
 	overflow: auto;
@@ -144,6 +148,15 @@ hr {
 
 .to-center {
 	text-align: center;
+}
+
+@media (max-height: 600px) {
+	.first-form {
+		margin-top: 3%;
+	}
+	.second-form {
+		margin-top: 3%;
+	}
 }
 
 @media (max-width: 1210px) {
@@ -227,6 +240,7 @@ hr {
 		width: 100%;
 	}
 	.partDown {
+		height: auto;
 		padding-left: 0%;
 		padding-right: 0%;
 	}
@@ -366,7 +380,9 @@ td {
 		padding-left: 5%;
 		padding-right: 5%;
 	}
-	.search-area {right: 5%}
+	.search-area {
+		right: 5%
+	}
 }
 
 @media (max-width: 550px) {
@@ -379,8 +395,12 @@ td {
 }
 
 @media (max-width: 490px) {
-	.top-area {height: 100px;}
-	.logo-chart {height: 50%;}
+	.top-area {
+		height: 100px;
+	}
+	.logo-chart {
+		height: 50%;
+	}
 	.search-area {
 		width: 90%;
 		top: 60%;
