@@ -11,7 +11,6 @@ html, body{
 
 .partUp {
 	width: 82%;
-	/*height: 337px;*/
 	height: 50%;
 	padding-left: 9%;
 	padding-right: 9%;
@@ -26,7 +25,6 @@ html, body{
 
 .slide {
 	width: 82%;
-	/*height: 337px;*/
 	height: 100%;
 	position: absolute;
 	display: none;
@@ -88,7 +86,6 @@ html, body{
 	height: 50%;
 	padding-left: 25%;
 	padding-right: 25%;
-	/*overflow: auto;*/
 	color: white;
 }
 
@@ -115,19 +112,18 @@ a {
 }
 
 .first-button {
-	margin-top: 25px;
-	margin-bottom: 15px;
+	margin-top: 20px;
+	margin-bottom: 10px;
 }
 
 .second-button {
-	margin-top: 20px;
-	margin-bottom: 15px;
+	margin-top: 15px;
+	margin-bottom: 10px;
 }
 
 .first-form {
 	float: left;
 	width: 40%;
-	background-color: yellow;
 }
 
 .line {
@@ -145,7 +141,6 @@ hr {
 .second-form {
 	float: left;
 	width: 40%;
-	background-color: yellow;
 }
 
 .to-center {
@@ -153,38 +148,8 @@ hr {
 }
 
 @media (max-height: 657px) {
-	.first-form {
-		background-color: blue;
-	}
 	hr {
-		height: 310px;
-	}
-	.second-form {
-		background-color: blue;
-	}
-	.first-button {
-		margin-bottom: 2%;
-	}
-	.second-button {
-		margin-bottom: 2%;
-	}
-	.data-titles {
-		margin-bottom: 5%;
-	}
-	.forget-pass {
-		margin-top: 33px;
-	}
-}
-
-@media (max-height: 634px) {
-	.first-form {
-		background-color: purple;
-	}
-	hr {
-		height: 290px;
-	}
-	.second-form {
-		background-color: purple;
+		height: 295px;
 	}
 	.first-button {
 		margin-bottom: 2%;
@@ -196,29 +161,42 @@ hr {
 		margin-bottom: 4%;
 	}
 	.forget-pass {
+		margin-top: 30px;
+	}
+}
+
+@media (max-height: 634px) {
+	hr {
+		height: 288px;
+	}
+	.data-titles {
+		margin-bottom: 3%;
+	}
+	.forget-pass {
 		margin-top: 29px;
 	}
 }
 
-@media (max-height: 585px) {
-	.first-form {
-		background-color: green;
-	}
+@media (max-height: 615px) {
 	hr {
-		height: 273px;
+		height: 278px;
 	}
-	.second-form {
-		background-color: green;
+	.data-titles {
+		margin-top: 5.5%;
+		margin-bottom: 3%;
 	}
-	.first-button {
-		margin-bottom: 2%;
+	.forget-pass {
+		margin-top: 25px;
 	}
-	.second-button {
-		margin-bottom: 2%;
+}
+
+@media (max-height: 600px) {
+	hr {
+		height: 268px;
 	}
 	.data-titles {
 		margin-top: 5%;
-		margin-bottom: 2%;
+		margin-bottom: 2.5%;
 	}
 	.forget-pass {
 		margin-top: 23px;
@@ -306,7 +284,6 @@ hr {
 		width: 100%;
 	}
 	.partDown {
-		height: auto;
 		padding-left: 0%;
 		padding-right: 0%;
 	}
@@ -329,6 +306,10 @@ hr {
 	}
 	.slide {
 		height: 250px;
+	}
+	.partDown {
+		height: auto;
+		overflow: auto;
 	}
 	input {
 		width: 97%;
@@ -390,7 +371,6 @@ hr {
 }
 
 .search-area {
-	/*float: right;*/
 	right: 12%;
 	position: absolute;
 	top: 30%;
