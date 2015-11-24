@@ -88,7 +88,7 @@ html, body{
 	height: 50%;
 	padding-left: 25%;
 	padding-right: 25%;
-	overflow: auto;
+	/*overflow: auto;*/
 	color: white;
 }
 
@@ -127,6 +127,7 @@ a {
 .first-form {
 	float: left;
 	width: 40%;
+	background-color: yellow;
 }
 
 .line {
@@ -144,18 +145,83 @@ hr {
 .second-form {
 	float: left;
 	width: 40%;
+	background-color: yellow;
 }
 
 .to-center {
 	text-align: center;
 }
 
-@media (max-height: 600px) {
+@media (max-height: 657px) {
 	.first-form {
-		margin-top: 3%;
+		background-color: blue;
+	}
+	hr {
+		height: 310px;
 	}
 	.second-form {
-		margin-top: 3%;
+		background-color: blue;
+	}
+	.first-button {
+		margin-bottom: 2%;
+	}
+	.second-button {
+		margin-bottom: 2%;
+	}
+	.data-titles {
+		margin-bottom: 5%;
+	}
+	.forget-pass {
+		margin-top: 33px;
+	}
+}
+
+@media (max-height: 634px) {
+	.first-form {
+		background-color: purple;
+	}
+	hr {
+		height: 290px;
+	}
+	.second-form {
+		background-color: purple;
+	}
+	.first-button {
+		margin-bottom: 2%;
+	}
+	.second-button {
+		margin-bottom: 2%;
+	}
+	.data-titles {
+		margin-bottom: 4%;
+	}
+	.forget-pass {
+		margin-top: 29px;
+	}
+}
+
+@media (max-height: 585px) {
+	.first-form {
+		background-color: green;
+	}
+	hr {
+		height: 273px;
+	}
+	.second-form {
+		background-color: green;
+	}
+	.first-button {
+		margin-bottom: 2%;
+	}
+	.second-button {
+		margin-bottom: 2%;
+	}
+	.data-titles {
+		margin-top: 5%;
+		margin-bottom: 2%;
+	}
+	.forget-pass {
+		margin-top: 23px;
 	}
 }
 

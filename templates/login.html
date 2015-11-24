@@ -34,9 +34,9 @@
 	<div class="first-form">
 		<form action="/" id="myLogin">
 			<h2 class="to-center">Ingresar</h2>
-			<p>Correro electrónico</p>
+			<p class="data-titles">Correro electrónico</p>
 			<input type="text" id="login-email" ng-model="myemail" placeholder="Email">
-			<p>Contraseña</p>
+			<p class="data-titles">Contraseña</p>
 			<input type="password" id="login-password" ng-model="password" placeholder="Password">
 			<a><p class="forget-pass">¿Olvidaste tu contraseña?</p></a>
 			<center>
@@ -52,11 +52,11 @@
 	<div class="second-form">
   		<form id="signup">
 			<h2 class="to-center">Crea tu perfil</h2>
-			<p>Nombre</p>
+			<p class="data-titles">Nombre</p>
 			<input type="text" id="signup-user" placeholder="Nombre (Se genera automaticamente)" readonly="readonly">
-			<p>Correo electrónico</p>
+			<p class="data-titles">Correo electrónico</p>
 			<input type="email" id="signup-email" placeholder="Email (Este será tu nombre de usuario)">
-			<p>Contraseña</p>
+			<p class="data-titles">Contraseña</p>
 			<input type="password" id="signup-password" placeholder="Password">
 			<center>
 				<button type="button" class="signup-button second-button" ng-click="signUp()">Continuar</button>
