@@ -82,7 +82,7 @@ html, body{
 /*Part Down*/
 
 .partDown {
-	background-color: yellow;
+	background-color: red;
 	height: 50%;
 	padding-left: 25%;
 	padding-right: 25%;
@@ -148,12 +148,6 @@ hr {
 }
 
 @media (max-height: 657px) {
-	/*.first-form {
-		background-color: green;
-	}
-	.second-form {
-		background-color: green;
-	}*/
 	hr {
 		height: 295px;
 	}
@@ -172,12 +166,6 @@ hr {
 }
 
 @media (max-height: 634px) {
-	/*.first-form {
-		background-color: purple;
-	}
-	.second-form {
-		background-color: purple;
-	}*/
 	hr {
 		height: 288px;
 	}
@@ -190,12 +178,6 @@ hr {
 }
 
 @media (max-height: 615px) {
-	/*.first-form {
-		background-color: yellow;
-	}
-	.second-form {
-		background-color: yellow;
-	}*/
 	hr {
 		height: 278px;
 	}
@@ -209,12 +191,9 @@ hr {
 }
 
 @media (max-height: 600px) {
-	/*.first-form {
-		background-color: blue;
+	.partDown {
+		height: 300px;
 	}
-	.second-form {
-		background-color: blue;
-	}*/
 	hr {
 		height: 268px;
 	}
